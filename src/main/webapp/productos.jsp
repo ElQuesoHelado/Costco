@@ -1,3 +1,5 @@
+<%@ page import="org.dbp.entity.Producto" %>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -44,7 +46,21 @@
             </div>
         </div>
     </section>
+    <% ArrayList<Producto> productos = (ArrayList<Producto>) request.getAttribute("productos");
+        out.println(productos);
+        if (productos != null) {
+            for (Producto producto : productos) {
+                out.println(producto + "\n");
+                out.println();
+            }
+        } else {
+            out.println("Nulo");
+        }
+    %>
+
 </main>
+
+
 
 <footer>
     <p>&copy; 2024 Costco. Todos los derechos reservados.</p>
