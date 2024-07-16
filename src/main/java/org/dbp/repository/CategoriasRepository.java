@@ -8,18 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import org.dbp.entity.Producto;
-import org.dbp.repository.CategoriasRepository;
-import org.dbp.repository.ProductosRepository;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
-
+        
 class Node {
     public String val;
     Node parent;
@@ -36,13 +27,9 @@ class Node {
 }
 
 class Tree {
-    //    Node root = new Node("root");
     HashMap<String, Node> map = new HashMap<>();
 
     public void add(String parentVal, String leafVal) {
-//        map.putIfAbsent(root, new )
-//        Node parent = find(parentVal);
-
         //Añadimos padre
         if (!map.containsKey(parentVal)) {
             map.put(parentVal, new Node(parentVal, map.get("root")));
@@ -99,16 +86,6 @@ public class CategoriasRepository extends Repository {
             PreparedStatement st = conn.prepareStatement(sentencia);
 
             ResultSet rs = st.executeQuery();
-
-//            ArrayList<Producto> resultado = new ArrayList<>();
-            JSONObject root = new JSONObject();
-            JSONArray categorias = new JSONArray();
-            JSONArray subcategorias = new JSONArray();
-            JSONArray subsubcategorias = new JSONArray();
-
-            Map<String, JSONObject> capa1 = new HashMap<>();
-            Map<String, JSONObject> capa2 = new HashMap<>();
-
             Tree arbol = new Tree();
 
             while (rs.next()) {
@@ -119,19 +96,12 @@ public class CategoriasRepository extends Repository {
 
                 arbol.add(categoria, subcategoria);
                 if (subsubcategoria != null)
-                    arbol.                      add(subcategoria, subsubcategoria);
-            }
-
-            System.out.println(arbol.map.get("root").leafs.size());
-            for (Node node : arbol.map.get("Armas").leafs) {
-                System.out.println(node.val);
+                    arbol.add(subcategoria, subsubcategoria);
             }
 
             return arbol.toJson();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-//        request.setAttribute("productos", resultado);
-//        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }
