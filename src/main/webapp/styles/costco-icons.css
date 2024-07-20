@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "costco-icons";
+  src: url(costco-icons.woff);
+}
+
+.ci {
+  font-family: "costco-icons";
+  margin: 0px;
+}
+
+.ci-search:after {
+  content: "\e900";
+  font-size: x-large;
+}
+
+.ci-close:after {
+  content: "\e906";
+}
+
+.help-icon:after{
+  display: block;
+  content: "?";
+  color: white;
+  width: 20px;
+  text-align: center;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0060a9;
+}
+
+.ci-carrito:after {
+  content: "\e90a";
+  font-size: x-large;
+}
+
+.ci-shop:after {
+  content: "\e901";
+}
+
+.ci-facebook:after {
+  content: "\f1c4";
+  color: #1877f2;
+}
+
+.ci-instagram:after {
+  content: "\e858";
+  color: #f00076;
+}
+
+.ci-pinterest:after {
+  content: "\f1d6";
+  color: #e60023;
+}
+
+.ci-next:after {
+  content: "\e90E";
+}
