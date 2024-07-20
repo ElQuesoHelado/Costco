@@ -13,7 +13,7 @@
             <li><a href="${pageContext.request.contextPath}/">Inicio</a></li>
             <li><a href="${pageContext.request.contextPath}/productos">Productos</a></li>
             <li><a href="#">Ofertas</a></li>
-            <li><a href="#">Mi Cuenta</a></li>
+            <li><a href="${pageContext.request.contextPath}/micuenta">Mi Cuenta</a></li>
             <li><a href="#">Carrito</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
