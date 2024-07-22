@@ -27,5 +27,5 @@ MENU_SELECTOR.on("mouseleave", (ev) => {
 $(".dropdown-item").on("mouseenter", (ev) => {
   let content = ev.currentTarget.lastElementChild.outerHTML;
   content = content.replace("hidden", "");
-  SUBCATEGORY_SPACE.jsp(content);
+  SUBCATEGORY_SPACE.html(content);
 });
