@@ -1,0 +1,181 @@
+.default-theme {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "Microsoft JhengHei" !important;
+  --bs-border-radius: 0;
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-hover-bg: #0060a910;
+  --bs-dropdown-link-active-bg: #0060a920;
+  box-shadow: 1px 1px 4px -1px gray;
+}
+
+.text-gray {
+  color: #5f5f5f;
+}
+
+.fs-7 {
+  font-size: smaller;
+}
+
+.text-blue {
+  color: #0060a9;
+}
+
+.bg-blue {
+  background-color: #0073a6;
+}
+
+.input-group-text {
+  background-color: white;
+  border: 0;
+}
+
+input {
+  border: 0 !important;
+}
+
+.input-group {
+  border: 1px solid   #2c70aa;
+}
+
+.btn-primary {
+  --bs-btn-bg: #3071a9;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-hover-bg: #1964a5;
+  --bs-btn-active-bg: #00355d;
+  --bs-btn-active-border-color: transparent;
+}
+
+header, footer {
+  background-color: #efefef;
+}
+
+#menu-nav td {
+  border: 1px solid #a0a0a0;
+  padding: 5px 10px;
+}
+
+#menu-nav td a p {
+  margin: 0;
+}
+
+#menu-nav {
+  border-style: hidden;
+}
+#menu-nav td a {
+  color: #0060a9;
+  text-decoration: none;
+}
+#menu-nav td a:hover {
+  color: #00355d;
+  text-decoration: underline;
+}
+
+#subcategories {
+  border-left: 1px solid #cacaca;
+}
+
+#menu-selector > a {
+  color: white;
+  padding: 0;
+  text-decoration: none;
+}
+
+.dropdown-item a {
+  width: 200px;
+  display: flex;
+  font-size: 11pt;
+  padding-left: 9px;
+  justify-content: space-between;
+  align-items: center;
+  color: #0060a9 !important;
+}
+
+#icons-network a {
+  text-decoration: none;
+}
+
+.footer-link {
+  text-decoration: none;
+  font-size: smaller;
+  color: #5f5f5f;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.tabs a:not(:last-child):after{
+  content: "|";
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.url-link {
+  color: #5f5f5f;
+  text-decoration: none;
+}
+
+#url {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+#url li:not(:first-child)::before {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  content: "/";
+}
+
+.url-link:hover {
+  text-decoration: underline;
+}
+
+.accordion {
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-btn-focus-box-shadow: transparent;
+  --bs-accordion-active-color: inherit;
+}
+
+.accordion .accordion-item {
+  border-radius: 5px;
+  border: 1px solid #cacaca;
+}
+
+.accordion-button {
+  background-color: transparent;
+}
+
+.menu-categories {
+  width: 720px;
+  margin: 0px 0px;
+  padding: 15px 10px;
+}
+
+.menu-categories div a {
+  font-size: large;
+  color: black;
+  text-decoration: none;
+}
+
+.menu-categories div a:hover {
+  text-decoration: underline;
+  color: #222220;
+}
+
+.menu-categories div ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.menu-categories div ul li a {
+  color: #0060a9;
+  font-size: 11pt;
+}
+
+.menu-categories div ul li a:hover {
+  color: #222220;
+}
