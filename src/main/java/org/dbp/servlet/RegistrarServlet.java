@@ -2,7 +2,10 @@ package org.dbp.servlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.*;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.dbp.entity.Usuario;
 import org.dbp.repository.UsuariosRepository;
 
@@ -15,8 +18,8 @@ import static org.dbp.security.Security.getCookieUsuario;
  * Todo el proceso de login y authentificacion lo hacemos en base a una cookie
  * Es inseguro y penetrable
  */
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/registrar")
+public class RegistrarServlet extends HttpServlet {
     UsuariosRepository usuariosRepository = new UsuariosRepository();
 
     @Override
@@ -26,36 +29,41 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/");
             return;
         }
-        request.getRequestDispatcher("/login.jsp").forward(request, response);
+        request.getRequestDispatcher("/registrar.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, IOException {
-        Usuario usuario = usuariosRepository.getUsuario(request.getParameter("username"));
-
         Cookie cookieUsuario = getCookieUsuario(request);
 
         if (cookieUsuario != null) {
-            log("Ya esta logeado");
+//            log("Ya esta logeado");
             response.sendRedirect("/");
             return;
         }
 
-        //Usuario no existente, o contrasenia incorrecta
-        // TODO: ?? Como se redirecciona?
-        //  1. con ajax???
-        //  2. retorna login.jsp de nuevo con parametro get error????
-        if (usuario == null || !Objects.equals(usuario.getPassword(), request.getParameter("password"))) {
-//            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-            log("Usuario invalido");
-            response.sendRedirect("/login");
-            return;
+        //TODO: Agregar validacion de mail
+        //***
+
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        Long metodo_pago;
+        try {
+            metodo_pago = Long.parseLong(request.getParameter("metodo_pago"));
+        } catch (NumberFormatException e) {
+            metodo_pago = null;
         }
 
-        log("Usuario encontrado: " + usuario.getId() + " " + usuario.getEmail());
-        Cookie loginCookie = new Cookie("usuario", usuario.getEmail());
-        loginCookie.setMaxAge(60);
-        response.addCookie(loginCookie);
+        try {
+            usuariosRepository.registrarUsuario(
+                    request.getParameter("username"),
+                    request.getParameter("password"),
+                    metodo_pago);
+        } catch (Exception e) {
+            //Enviar a un error?????
+            response.sendRedirect("/");
+            return;
+        }
 
         response.sendRedirect("/micuenta");
     }

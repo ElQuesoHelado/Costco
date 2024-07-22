@@ -4,7 +4,13 @@ public class Usuario {
     private Long id;
     private String email;
     private String password;
-    private Long metodo_pago;
+    private Long metodo_pago = null;
+
+    public Usuario(Long id, String email, String password) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+    }
 
     public Usuario(Long id, String email, String password, Long metodo_pago) {
         this.id = id;

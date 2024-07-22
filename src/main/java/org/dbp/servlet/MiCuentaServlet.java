@@ -28,7 +28,7 @@ public class MiCuentaServlet extends HttpServlet {
 
         log(Long.toString(usuario.getId()));
         log(usuario.getEmail());
-        log(usuario.getPassword());
+        log(usuario.getPassword()); 
 
         request.setAttribute("usuario", usuario);
         request.getRequestDispatcher("/micuenta.jsp").forward(request, response);
