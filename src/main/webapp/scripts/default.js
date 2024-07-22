@@ -21,7 +21,7 @@ MENU_SELECTOR.on("mouseenter", (ev) => {
 });
 MENU_SELECTOR.on("mouseleave", (ev) => {
   MENU_SELECTOR_BOOTSTRAP.hide();
-  SUBCATEGORY_SPACE.jsp("");
+  SUBCATEGORY_SPACE.html("");
 });
 
 $(".dropdown-item").on("mouseenter", (ev) => {
