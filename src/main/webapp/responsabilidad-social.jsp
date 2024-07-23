@@ -18,7 +18,7 @@
       <li>Responsabilidad Social</li>
     </ul>
 
-    <div class="container-fluid row mb-5">
+    <div class="container-fluid row">
       <div class="col-3">
         <img class="img-fluid" src="img/accesibilidad/res1.avif">
         <br><br>

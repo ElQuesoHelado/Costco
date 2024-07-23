@@ -18,7 +18,7 @@
       <li>Accesibilidad</li>
     </ul>
 
-    <div class="mx-4 mb-5" style="font-size: smaller;">
+    <div class="mx-4" style="font-size: smaller;">
     <b>Accesibilidad.</b> <br>
     Compromiso de Costco México. <br>
     <br>

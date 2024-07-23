@@ -1,6 +1,7 @@
 .default-theme {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "Microsoft JhengHei" !important;
   --bs-border-radius: 0;
+  color: #333;
 }
 
 .dropdown-menu {
@@ -62,10 +63,6 @@ header, footer {
 
 #menu-nav {
   border-style: hidden;
-}
-#menu-nav td a {
-  color: #0060a9;
-  text-decoration: none;
 }
 #menu-nav td a:hover {
   color: #00355d;

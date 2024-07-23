@@ -1,0 +1,116 @@
+.nav-item a {
+  /* background: #386891 url(/img/form/button.png) 50% 50% repeat-x */
+  background: #386891 url(/img/form/button.png) 50% 50% repeat-x;
+  color: white !important;
+}
+
+.form-title {
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 10px;
+  font-weight: bold;
+  background: #ccc url(/img/form/soft.png) 50% repeat-x;
+  color: black;
+}
+
+#form-content {
+  padding: 5px 10px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding-left: 30px;
+  border: 1px solid #aaa;
+  background: #ccc url(/img/form/soft.png) 50% repeat-x;
+}
+
+.form-check-input {
+  border: 0px;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background-color: #cacaca;
+  box-shadow: 0px 0px 6px -1px black ;
+}
+
+.form-check-input:checked{
+  background-color: #3e6d94 !important;
+}
+
+.form-check-label {
+  padding-left: 5px;
+  height: 50%;
+}
+
+#form-2 {
+  padding: 30px 10px 0px;
+  border-radius: 5px;
+  border: 1px solid #cacaca;
+}
+
+#form-2 .form-control, #form-2 .form-select {
+  background: linear-gradient(180deg, #e5e5e5 0, #fff) !important;
+  border-radius: 5px !important;
+  border: 1px solid #83a1c1 !important;
+  box-shadow: 0px 0px 10px -4px black;
+}
+
+#form-2 .form-select {
+  background: var(--bs-form-select-bg-img) no-repeat right .75rem center/16px 12px, linear-gradient(180deg, #e5e5e5 0%, #fff 100%) !important; 
+}
+
+textarea {
+  box-shadow: 0px 0px 10px -4px black;
+}
+
+#form-2-header {
+  display: inline-block;
+  background-color: white;
+  padding: 5px;
+  color: #00355d;
+  font-weight: bold;
+  margin-top: -15px;
+  margin-left: 10px;
+  position: absolute;
+  border: 1px solid #cacaca;
+}
+
+#form-footer {
+  color: #555;
+}
+
+#form-footer .form-check:hover, #form-footer .btn:hover {
+  border: 1px solid #777;
+}
+
+@media (min-width: 992px) {
+  #form-footer {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+
+#form-footer .btn {
+  background: #ccc url(/img/form/soft.png) 50% repeat-x;
+  color: #555;
+  border-radius: 5px;
+  border: 1px solid #cacaca;
+}
+
+#form-footer .form-check:active, #form-footer .btn:active {
+  background: linear-gradient(180deg, #9aafc0 0, #3e6d94) !important;
+  color: white;
+}
+
+.error {
+  background-color: #f8d7da;
+  width: fit-content;
+  margin-top: .5rem;
+  padding: 5px 10px;
+  color: #721c24;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px -12px black;
+  border: 1px solid #f5c6cb;
+}

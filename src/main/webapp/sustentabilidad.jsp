@@ -18,7 +18,7 @@
       <li>Sustentabilidad</li>
     </ul>
 
-    <div class="container-fluid row mb-5">
+    <div class="container-fluid row">
       <div class="col-3">
         <img class="img-fluid" src="img/accesibilidad/sustentabilidad.avif">
         <div class="d-flex flex-column mx-3 my-2">

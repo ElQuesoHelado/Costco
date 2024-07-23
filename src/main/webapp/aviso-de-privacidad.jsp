@@ -18,7 +18,7 @@
       <li>Aviso de Privacidad</li>
     </ul>
 
-    <div class="container-fluid row mb-5">
+    <div class="container-fluid row">
       <img class="img-fluid" src="img/aviso-de-privacidad.avif">
       <h2 class="my-4">Conozca sus derechos</h2>
       <div class="accordion d-flex flex-column row-gap-3">

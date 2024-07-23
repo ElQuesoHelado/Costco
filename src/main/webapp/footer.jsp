@@ -1,5 +1,5 @@
 <%@page pageEncoding="UTF-8" %>
-<footer class="container-fluid p-0">
+<footer class="container-fluid p-0 mt-5">
   <div class="container-xxl px-3 py-4">
     <div class="row">
       <div class="col">
@@ -24,14 +24,16 @@
         Sobre nosotros<br>
         <a class="footer-link" href="sustentabilidad-costly.jsp">Sustentabilidad</a><br>
         <a class="footer-link" href="/como-nos-diferenciamos.jsp">¿Cómo nos Diferenciamos?</a><br>
+        <a class="footer-link" href="/informacion.jsp">Información de la Compañía</a><br>
         <a class="footer-link" href="/aviso-de-privacidad.jsp">Términos y Condiciones</a><br>
         <a class="footer-link" href="/aviso-de-privacidad.jsp">Aviso de Privacidad</a><br>
-        <a class="footer-link" href="#">Mapa del Sitio</a><br>
+        <a class="footer-link" href="/solicitud-archivos.jsp">Solicitud de archivos</a><br>
+        <a class="footer-link" href="/mapa-del-sitio.jsp">Mapa del Sitio</a><br>
         <a class="footer-link" href="/accesibilidad.jsp">Accesibilidad</a><br>
       </div>
       <div class="col-3">
         Conoce Más<br>
-        <a class="footer-link" href="#">Danos tu Opinión</a><br>
+        <a class="footer-link" href="/contactenos.jsp">Danos tu Opinión</a><br>
         <a class="footer-link" href="#">Nuevos productos</a><br>
         <a class="footer-link" href="#">Garantías Extendidas</a><br>
       </div>
