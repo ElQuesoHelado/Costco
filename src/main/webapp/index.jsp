@@ -1,38 +1,24 @@
+<%@page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Costco</title>
-    <link rel="stylesheet" href="resources/styles/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Costco</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="styles/default.css" rel="stylesheet">
+  <link href="styles/costco-icons.css" rel="stylesheet">
 </head>
-<body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="${pageContext.request.contextPath}/">Inicio</a></li>
-            <li><a href="${pageContext.request.contextPath}/productos">Productos</a></li>
-            <li><a href="#">Ofertas</a></li>
-            <li><a href="#">Mi Cuenta</a></li>
-            <li><a href="#">Carrito</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+<body class="default-theme">
+  <jsp:include page="header.jsp"/>
 
-<main>
-    <section class="hero">
-        <h1>Bienvenidos a los Pollos Hermanos</h1>
-        <p>Las mejores ofertas en productos de calidad.</p>
-        <a href="#" class="cta">Ver Ofertas</a>
-    </section>
+  <div class="container-xxl my-3">
+    <!-- URL -->
+    <!-- <ul id="url" class="d-flex text-gray fs-7"> -->
+      <!-- <li><a class="url-link" href="/">Inicio</a></li> -->
+      <!-- <li>Accesibilidad</li> -->
+    <!-- </ul> -->
+  </div>
 
-</main>
-
-<footer>
-    <p>&copy; 2024 Costco. Todos los derechos reservados.</p>
-</footer>
-
-<script src="scripts.js"></script>
+  <jsp:include page="footer.jsp"/>
 </body>
 </html>
