@@ -1,4 +1,11 @@
-<%@page pageEncoding="UTF-8" import="org.json.JSONArray,org.json.JSONObject" %>
+<%@page pageEncoding="UTF-8" import="org.json.JSONArray,org.json.JSONObject,org.dbp.repository.CategoriasRepository" %>
+<%
+if(session.getAttribute("categorias") == null)
+session
+  .setAttribute("categorias", new CategoriasRepository().get_categorias().getJSONArray("categorias"));
+
+%>
+
 <header class="container-fluid p-0">
   <nav class="container-xxl navbar px-3 column-gap-4">
     <a href="/">
