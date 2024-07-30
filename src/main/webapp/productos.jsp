@@ -110,6 +110,10 @@
                         <h5 id="peso"></h5>
                         <h5 id="marca"></h5>
                         <p id="descripcion"></p>
+                        <div class="d-flex justify-content-between mt-3">
+                            <button id="add-to-cart" class="btn btn-primary">Añadir al carrito</button>
+                            <button id="add-to-list" class="btn btn-secondary">Añadir a la lista</button>
+                        </div>
                     </div>
                 </div>
             </div>
