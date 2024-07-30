@@ -118,7 +118,7 @@
                     <h2>Bienvenido!</h2>
                     <ul class="nav flex-column">
                         <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="/ordenes"><i class="fas fa-box"></i> Orders & Purchases</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/ordenes"><i class="fas fa-box"></i> Ordenes & Pedidos</a></li>
                         <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i> Detalles de Cuenta</a></li>
                         <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i> Direcciones</a></li>
                         <li class="nav-item"><a class="nav-link" href="/pay_methods"><i class="fas fa-credit-card"></i> Formas de Pago</a></li>
@@ -150,15 +150,16 @@
                                     Showing: <span id="selected-period">Last 6 Months</span>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('Last 6 Months')">Last 6 Months</a></li>
-                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('2024 January-June')">2024 January-June</a></li>
-                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('2023 July-December')">2023 July-December</a></li>
-                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('2023 January-June')">2023 January-June</a></li>
-                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('2022 July-December')">2022 July-December</a></li>
-                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('2022 January-June')">2022 January-June</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('Last 6 Months')">Último 6
+                                    Meses</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('2024 January-June')">2024 Enero-Junio</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('2023 July-December')">2023 Julio-Diciembre</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('2023 January-June')">2023 Enero-Junio</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('2022 July-December')">2022 Julio-Diciembre</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="selectPeriod('2022 January-June')">2022 Enero-Junio</a></li>
                                 </ul>
                             </div>
-                            <p>No orders are available for the selected date range.</p>
+                            <p>No hay pedidos disponibles para el rango de fechas seleccionado.</p>
                         </div>
                         <div class="tab-pane fade" id="in-warehouse" role="tabpanel" aria-labelledby="in-warehouse-tab">
                             <!-- Content for In-Warehouse tab -->
