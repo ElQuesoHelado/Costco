@@ -114,7 +114,7 @@
                 <h2>Bienvenido!</h2>
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i> Ordenes & Pedidos </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i> Pedidos & Compras </a></li>
                     <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i> Detalles de Cuenta</a></li>
                     <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i> Direcciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pay_methods"><i class="fas fa-credit-card"></i> Formas de Pago</a></li>
