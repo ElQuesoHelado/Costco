@@ -45,7 +45,6 @@
       </div>
       <div class="col-3">
         Servicios Adicionales<br>
-        <a class="footer-link" href="#">Seguimiento de tu Orden</a><br>
         <a class="footer-link" href="/aviso-de-privacidad.jsp">Devoluciones y Cancelaciones</a><br>
         <a class="footer-link" href="/aviso-de-privacidad.jsp">Política de Devolución</a><br>
       </div>
@@ -53,7 +52,7 @@
     <hr>
     <div class="d-flex flex-column row-gap-3 align-items-center">
       <div class="d-flex justify-content-center tabs">
-        <a class="footer-link" href="#">Mapa del Sitio</a>
+        <a class="footer-link" href="mapa-del-sitio.jsp">Mapa del Sitio</a>
         <a class="footer-link" href="aviso-de-privacidad.jsp">Términos y Condiciones</a>
         <a class="footer-link" href="aviso-de-privacidad.jsp">Aviso de Privacidad</a>
       </div>
