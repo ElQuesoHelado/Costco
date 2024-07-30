@@ -88,9 +88,9 @@
             </div>
             <div class="flex-fill">
                 <ul class="nav text-white column-gap-4 justify-content-center">
-                    <li><a>Hola</a></li>
-                    <li>Hola</li>
-                    <li>Hola</li>
+<%--                    <li><a>Hola</a></li>--%>
+<%--                    <li>Hola</li>--%>
+<%--                    <li>Hola</li>--%>
                 </ul>
             </div>
         </div>

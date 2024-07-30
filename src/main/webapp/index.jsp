@@ -12,11 +12,9 @@
   <jsp:include page="header.jsp"/>
 
   <div class="container-xxl my-3">
-    <!-- URL -->
-    <!-- <ul id="url" class="d-flex text-gray fs-7"> -->
-      <!-- <li><a class="url-link" href="/">Inicio</a></li> -->
-      <!-- <li>Accesibilidad</li> -->
-    <!-- </ul> -->
+    <img src="img/caratula1.jpg" class="img-fluid" alt="caratula1">
+    <img src="img/caratula2.jpeg" class="img-fluid" alt="caratula2">
+    <img src="img/caratula3.jpg" class="img-fluid" alt="caratula3">
   </div>
 
   <jsp:include page="footer.jsp"/>
