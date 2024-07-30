@@ -193,7 +193,7 @@
                     <h2>Bienvenido!</h2>
                     <ul class="nav flex-column">
                         <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i> Orders & Purchases</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i> Odenes & Pedidos</a></li>
                         <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i> Detalles de Cuenta</a></li>
                         <li class="nav-item"><a class="nav-link active" href="/address"><i class="fas fa-book"></i> Direcciones</a></li>
                         <li class="nav-item"><a class="nav-link" href="/pay_methods"><i class="fas fa-credit-card"></i> Formas de Pago</a></li>
@@ -205,10 +205,10 @@
                 </nav>
     
                 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
-                    <h1 class="mb-4">Shipping & Billing</h1>
+                    <h1 class="mb-4">Envio & Factura</h1>
     
                     <div class="tab-container">
-                        <div class="tab active" onclick="showContent('shipping')">Shipping</div>
+                        <div class="tab active" onclick="showContent('shipping')">Factura</div>
                         <div class="tab" onclick="showContent('billing')">Billing</div>
                     </div>
     
@@ -219,7 +219,7 @@
                     </div>
                     <div id="billing" class="content-container">
                         <div class="address-box" onclick="openModal()">
-                            <span>Add New Address</span>
+                            <span>Direccion Nueva</span>
                         </div>
                     </div>
     
@@ -228,46 +228,43 @@
                         <div class="modal-content">
                             <span class="close" onclick="closeModal()">&times;</span>
                             <div class="form-container">
-                                <h2>Add New Address</h2>
+                                <h2>Direccion Nueva</h2>
                                 <form>
                                     <label for="firstName">First Name</label>
-                                    <input type="text" id="firstName" name="firstName">
+                                    <input type="text" id="Nombres" name="firstName">
     
                                     <label for="lastName">Last Name</label>
-                                    <input type="text" id="lastName" name="lastName">
+                                    <input type="text" id="Apellido" name="lastName">
     
-                                    <label for="companyName">Company Name (optional)</label>
+                                    <label for="companyName">Nombre Compañia (opcional)</label>
                                     <input type="text" id="companyName" name="companyName">
     
-                                    <label for="streetAddress">Street Address</label>
+                                    <label for="streetAddress">Calle</label>
                                     <input type="text" id="streetAddress" name="streetAddress">
     
-                                    <label for="apt">Apt., Suite, Unit, Etc. (optional)</label>
+                                    <label for="apt">Apt., Suite, Unit, Etc. (opcional)</label>
                                     <input type="text" id="apt" name="apt">
     
-                                    <label for="zipCode">Zip Code</label>
-                                    <input type="text" id="zipCode" name="zipCode" pattern="\d*" title="Only numbers are allowed">
-    
-                                    <label for="city">City</label>
+                                    <label for="city">Ciudad</label>
                                     <input type="text" id="city" name="city">
     
-                                    <label for="state">State</label>
+                                    <label for="state">Estado</label>
                                     <select id="state" name="state">
-                                        <option value="">Select</option>
+                                        <option value="">Selecciona</option>
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
                                         <!-- Other states omitted for brevity -->
                                     </select>
     
-                                    <label for="email">Email Address</label>
+                                    <label for="email">Emaiñ</label>
                                     <input type="email" id="email" name="email" value="jorgerivas9725@gmail.com">
     
-                                    <label for="phone">Phone</label>
+                                    <label for="phone">Celular</label>
                                     <input type="text" id="phone" name="phone" pattern="\d*" title="Only numbers are allowed">
     
                                     <div>
                                         <button type="button" class="cancel-button" onclick="cancel()">Cancel</button>
-                                        <button type="submit" class="save-button">Save Address</button>
+                                        <button type="submit" class="save-button">Guardar</button>
                                     </div>
                                 </form>
                                 <p>Changes made here to your shipping or billing address will not update the address associated with your membership.</p>
