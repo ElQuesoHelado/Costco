@@ -22,10 +22,12 @@
             background-color: #f8f9fa;
             padding: 0 0;
         }
+
         #main-content .header-placeholder {
             height: 60px;
             background-color: #f1f1f1;
         }
+
         #main-content .sidebar {
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -33,33 +35,41 @@
             padding-top: 20px;
             border-right: 1px solid #dee2e6;
         }
+
         #main-content .sidebar h2 {
             text-align: center;
             margin-bottom: 20px;
             color: #333;
         }
+
         #main-content .sidebar .nav-link {
             color: #333;
             padding: 10px 20px;
             border-left: 3px solid transparent;
         }
+
         #main-content .sidebar .nav-link:hover {
             background-color: #e9ecef;
         }
+
         #main-content .sidebar .nav-link.active {
             background-color: #f8f9fa;
             border-left-color: #007bff;
         }
+
         #main-content .sidebar .nav-link i {
             margin-right: 10px;
         }
+
         #main-content .main-content {
             padding: 20px 40px;
         }
+
         #main-content .breadcrumb {
             font-size: 14px;
             margin-bottom: 20px;
         }
+
         #main-content .tab-content {
             background-color: #fff;
             border: 1px solid #dee2e6;
@@ -67,23 +77,28 @@
             padding: 20px;
             border-radius: 0 0 5px 5px;
         }
+
         #main-content .dropdown-menu {
             right: 0;
             left: auto;
         }
+
         #main-content .nav-tabs .nav-link {
             border: 1px solid #dee2e6;
             border-radius: 5px 5px 0 0;
         }
+
         #main-content .nav-tabs .nav-link.active {
             color: #495057;
             background-color: #fff;
             border-color: #dee2e6 #dee2e6 #fff;
         }
+
         #main-content .btn-link {
             color: #007bff;
             text-decoration: none;
         }
+
         #main-content .btn-link:hover {
             text-decoration: underline;
         }
@@ -149,9 +164,11 @@
                         <div class="row">
                             <%
                                 JSONArray ordenes = (JSONArray) request.getAttribute("ordenes");
+
                                 for (Object e : ordenes) {
                                     JSONObject orden = (JSONObject) e;
 //                                    System.out.println(orden.get("numero_orden"));
+
                             %>
 
                             <div class="col col-md-4 col-lg-4 col-xl-3 col-xxl-3 mb-4">
@@ -230,9 +247,12 @@
     function selectPeriod(period) {
         document.getElementById('selected-period').textContent = period;
     }
+
     function clearCookies(){
         document.cookie = 'usuario=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     }
+
+
 </script>
 <jsp:include page="../footer.jsp"/>
 

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Home</title>
-    <link href="styles/costco-icons.css" rel="stylesheet">
+    <link href="../styles/costco-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="styles/default.css" rel="stylesheet">
+    <link href="../styles/default.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles/account.css" rel="stylesheet">
+    <link href="../styles/account.css" rel="stylesheet">
 </head>
 <body class="default-theme">
     <jsp:include page="../header.jsp"/>
@@ -59,7 +59,7 @@
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3">
                                                         <div>
-                                                            <a class="css-1ascxaa" href="/detalles_cuenta ">
+                                                            <a class="css-1ascxaa" href="/detalles_cuenta">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Detalles de Cuenta</h2>
                                                                     <div class="img_content">
@@ -125,7 +125,7 @@
                                                 <div class="row">
                                                     <div class="col-md-3 col-lg-3">
                                                         <div>
-                                                            <a class="css-1ascxaa" href="/costco_pay">
+                                                            <a class="css-1ascxaa" href="../costco_pay.jsp">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Costco Pay</h2>
                                                                     <div class="img_content">
@@ -167,7 +167,7 @@
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3">
                                                         <div>
-                                                            <a class="css-1ascxaa" href="/preference">
+                                                            <a class="css-1ascxaa" href="/preference.jsp">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Preferencias</h2>
                                                                     <div class="img_content">
@@ -187,8 +187,8 @@
                                             <div class="css-1wawha4 ">
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3">
-                                                        <div onclick="clearCookies()">
-                                                            <a class="css-1ascxaa" href="/logout">
+                                                        <div>
+                                                            <a class="css-1ascxaa" href="/">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Salir</h2>
                                                                     <div class="img_content">
@@ -214,11 +214,6 @@
                 </div>
             </div>
     </div>
-    <script>
-        function clearCookies(){
-            document.cookie = 'usuario=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-        }
-    </script>
 
     <jsp:include page="../footer.jsp"/>
 </body>

@@ -1,3 +1,4 @@
+<%@ page import="java.util.ArrayList" %>
 <%@page pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
@@ -10,9 +11,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-    <link href="styles/costco-icons.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="styles/default.css" rel="stylesheet">
+    <link href="../styles/costco-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="../styles/default.css" rel="stylesheet">
     <style>
         #main-content {
             font-family: Arial, sans-serif;
@@ -178,143 +180,173 @@
     </style>
 
 <body class="default-theme">
-  <jsp:include page="../header.jsp"/>
+<jsp:include page="../header.jsp"/>
 
-    <div class="container-xxl my-3">
-        <!-- URL -->
-        <ul id="url" class="d-flex text-gray fs-7">
-          <li><a class="url-link" href="/">Inicio</a></li>
-          <li><a class="url-link" href="/micuenta">Cuenta</a></li>
-          <li>Direcciones</li>
-        </ul>
-        <div id="main-content" class="container-fluid m-0 p-0">
-            <div class="row m-0 p-0">
-                <nav class="col-md-3 col-lg-2 d-md-block sidebar">
-                    <h2>Bienvenido!</h2>
-                    <ul class="nav flex-column">
-                        <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i> Odenes & Pedidos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i> Detalles de Cuenta</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="/address"><i class="fas fa-book"></i> Direcciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/pay_methods"><i class="fas fa-credit-card"></i> Formas de Pago</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/costco_pay"><i class="fas fa-wallet"></i> Costco Pay</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/list"><i class="fas fa-list"></i> Lista</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/preference"><i class="fas fa-cog"></i> Preferencias</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
-                    </ul>
-                </nav>
-    
-                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
-                    <h1 class="mb-4">Envio & Factura</h1>
-    
-                    <div class="tab-container">
-                        <div class="tab active" onclick="showContent('shipping')">Factura</div>
-                        <div class="tab" onclick="showContent('billing')">Billing</div>
+<div class="container-xxl my-3">
+    <!-- URL -->
+    <ul id="url" class="d-flex text-gray fs-7">
+        <li><a class="url-link" href="/">Inicio</a></li>
+        <li><a class="url-link" href="micuenta.jsp">Cuenta</a></li>
+        <li>Direcciones</li>
+    </ul>
+    <div id="main-content" class="container-fluid m-0 p-0">
+        <div class="row m-0 p-0">
+            <nav class="col-md-3 col-lg-2 d-md-block sidebar">
+                <h2>Bienvenido!</h2>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i>Cuenta</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/ordenes"><i class="fas fa-box"></i> Ordenes & Pedidos </a></li>
+                    <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i>
+                        Detalles de Cuenta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i>
+                        Direcciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pay_methods"><i class="fas fa-credit-card"></i>
+                        Formas de Pago</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../costco_pay.jsp"><i class="fas fa-wallet"></i>
+                        Costco
+                        Pay</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/list"><i class="fas fa-list"></i> Lista</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../preference.jsp"><i class="fas fa-cog"></i>
+                        Preferencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/" onClick="clearCookies()"><i
+                            class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
+                <h1 class="mb-4">Envíos & facturación</h1>
+
+                <div class="tab-container">
+                    <div class="tab active" onclick="showContent('shipping')">Envios</div>
+                    <div class="tab" onclick="showContent('billing')">Facturación</div>
+                </div>
+
+                <div id="shipping" class="content-container active">
+                    <%
+                        //                        ArrayList<String> arrayDirecciones = (ArrayList<String>) request.getAttribute("direcciones");
+
+                        for (String direccion : (ArrayList<String>) request.getAttribute("direcciones")) {
+                    %>
+                    <div class="address-box">
+                        <span><%=direccion%></span>
                     </div>
-    
-                    <div id="shipping" class="content-container active">
-                        <div class="address-box" onclick="openModal()">
-                            <span>Add New Address</span>
+                    <%}%>
+                    <%--                    <div class="address-box">--%>
+                    <%--                        <span>${usuario}</span>--%>
+                    <%--                    </div>--%>
+                    <div class="address-box" onclick="openModal()">
+                        <span>Añadir Dirección</span>
+                    </div>
+                </div>
+                <div id="billing" class="content-container">
+                    <div class="address-box" onclick="openModal()">
+                        <span>Añadir Dirección</span>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div id="addressModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <div class="form-container">
+                            <h2>Add New Address</h2>
+                            <form>
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName">
+
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName">
+
+                                <label for="companyName">Company Name (optional)</label>
+                                <input type="text" id="companyName" name="companyName">
+
+                                <label for="streetAddress">Street Address</label>
+                                <input type="text" id="streetAddress" name="streetAddress">
+
+                                <label for="apt">Apt., Suite, Unit, Etc. (optional)</label>
+                                <input type="text" id="apt" name="apt">
+
+                                <label for="zipCode">Zip Code</label>
+                                <input type="text" id="zipCode" name="zipCode" pattern="\d*"
+                                       title="Only numbers are allowed">
+
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city">
+
+                                <label for="state">State</label>
+                                <select id="state" name="state">
+                                    <option value="">Select</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <!-- Other states omitted for brevity -->
+                                </select>
+
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" value="jorgerivas9725@gmail.com">
+
+                                <label for="phone">Phone</label>
+                                <input type="text" id="phone" name="phone" pattern="\d*"
+                                       title="Only numbers are allowed">
+
+                                <div>
+                                    <button type="button" class="cancel-button" onclick="cancel()">Cancel</button>
+                                    <button type="submit" class="save-button">Save Address</button>
+                                </div>
+                            </form>
+                            <p>Changes made here to your shipping or billing address will not update the address
+                                associated with your membership.</p>
                         </div>
                     </div>
-                    <div id="billing" class="content-container">
-                        <div class="address-box" onclick="openModal()">
-                            <span>Direccion Nueva</span>
-                        </div>
-                    </div>
-    
-                    <!-- The Modal -->
-                    <div id="addressModal" class="modal">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal()">&times;</span>
-                            <div class="form-container">
-                                <h2>Direccion Nueva</h2>
-                                <form>
-                                    <label for="firstName">First Name</label>
-                                    <input type="text" id="Nombres" name="firstName">
-    
-                                    <label for="lastName">Last Name</label>
-                                    <input type="text" id="Apellido" name="lastName">
-    
-                                    <label for="companyName">Nombre Compañia (opcional)</label>
-                                    <input type="text" id="companyName" name="companyName">
-    
-                                    <label for="streetAddress">Calle</label>
-                                    <input type="text" id="streetAddress" name="streetAddress">
-    
-                                    <label for="apt">Apt., Suite, Unit, Etc. (opcional)</label>
-                                    <input type="text" id="apt" name="apt">
-    
-                                    <label for="city">Ciudad</label>
-                                    <input type="text" id="city" name="city">
-    
-                                    <label for="state">Estado</label>
-                                    <select id="state" name="state">
-                                        <option value="">Selecciona</option>
-                                        <option value="AL">Alabama</option>
-                                        <option value="AK">Alaska</option>
-                                        <!-- Other states omitted for brevity -->
-                                    </select>
-    
-                                    <label for="email">Emaiñ</label>
-                                    <input type="email" id="email" name="email" value="jorgerivas9725@gmail.com">
-    
-                                    <label for="phone">Celular</label>
-                                    <input type="text" id="phone" name="phone" pattern="\d*" title="Only numbers are allowed">
-    
-                                    <div>
-                                        <button type="button" class="cancel-button" onclick="cancel()">Cancel</button>
-                                        <button type="submit" class="save-button">Guardar</button>
-                                    </div>
-                                </form>
-                                <p>Changes made here to your shipping or billing address will not update the address associated with your membership.</p>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <script>
-                        function showContent(contentId) {
-                            var contents = document.querySelectorAll('.content-container');
-                            contents.forEach(function (content) {
-                                content.classList.remove('active');
-                            });
-                            document.getElementById(contentId).classList.add('active');
-    
-                            var tabs = document.querySelectorAll('.tab');
-                            tabs.forEach(function (tab) {
-                                tab.classList.remove('active');
-                            });
-                            document.querySelector('.tab[onclick="showContent(\'' + contentId + '\')"]').classList.add('active');
-                        }
-    
-                        function openModal() {
-                            document.getElementById('addressModal').style.display = 'block';
-                        }
-    
-                        function closeModal() {
-                            document.getElementById('addressModal').style.display = 'none';
-                        }
-    
-                        function cancel() {
-                            document.querySelector('form').reset();
+                </div>
+
+                <script>
+                    function clearCookies() {
+                        document.cookie = 'usuario=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                    }
+
+                    function showContent(contentId) {
+                        var contents = document.querySelectorAll('.content-container');
+                        contents.forEach(function (content) {
+                            content.classList.remove('active');
+                        });
+                        document.getElementById(contentId).classList.add('active');
+
+                        var tabs = document.querySelectorAll('.tab');
+                        tabs.forEach(function (tab) {
+                            tab.classList.remove('active');
+                        });
+                        document.querySelector('.tab[onclick="showContent(\'' + contentId + '\')"]').classList.add('active');
+                    }
+
+                    function openModal() {
+                        document.getElementById('addressModal').style.display = 'block';
+                    }
+
+                    function closeModal() {
+                        document.getElementById('addressModal').style.display = 'none';
+                    }
+
+                    function cancel() {
+                        document.querySelector('form').reset();
+                        closeModal();
+                    }
+
+                    window.onclick = function (event) {
+                        var modal = document.getElementById('addressModal');
+                        if (event.target == modal) {
                             closeModal();
                         }
-    
-                        window.onclick = function (event) {
-                            var modal = document.getElementById('addressModal');
-                            if (event.target == modal) {
-                                closeModal();
-                            }
-                        }
-                    </script>
-                </main>
-            </div>
+                    }
+                </script>
+            </main>
         </div>
-      </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <jsp:include page="../footer.jsp"/>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<jsp:include page="../footer.jsp"/>
 </body>
 
 </html>

@@ -10,9 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     
-    <link href="styles/costco-icons.css" rel="stylesheet">
+    <link href="../styles/costco-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="styles/default.css" rel="stylesheet">
+    <link href="../styles/default.css" rel="stylesheet">
     <style>
         #main-content {
             font-family: Arial, sans-serif;
@@ -143,15 +143,24 @@
             <nav class="col-md-3 col-lg-2 d-md-block sidebar">
                 <h2>Bienvenido!</h2>
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i> Ordenes & Pedidos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i> Detalles de Cuenta</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i> Direcciones</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/pay_methods"><i class="fas fa-credit-card"></i> Formas de Pago</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/costco_pay"><i class="fas fa-wallet"></i> Costco Pay</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account
+                        Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/ordenes"><i class="fas fa-box"></i> Orders
+                        & Purchases</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i>
+                        Detalles de Cuenta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i>
+                        Direcciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pay_methods"><i class="fas fa-credit-card"></i>
+                        Formas de Pago</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../costco_pay.jsp"><i class="fas fa-wallet"></i>
+                        Costco
+                        Pay</a></li>
                     <li class="nav-item"><a class="nav-link" href="/list"><i class="fas fa-list"></i> Lista</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/preference"><i class="fas fa-cog"></i> Preferencias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../preference.jsp"><i class="fas fa-cog"></i>
+                        Preferencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/" onClick="clearCookies()"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -160,22 +169,22 @@
 
                 <div class="form-container">
                     <h2>Payment Methods</h2>
-                    <p>Solo se puede almacenar un método de pago en línea a la vez. Cualquier cambio en el método de pago reemplazará el método de pago predeterminado</p>
+                    <p>Only one online payment method may be stored at a time. Any changes to the payment method will replace the default payment method for all future orders, refills and family accounts linked.</p>
                     <form>
-                        <label for="cardNumber">Tarjeta Número</label>
+                        <label for="cardNumber">Card Number</label>
                         <div class="card-logos">
-                            <input type="text" id="cardNumber" name="cardNumber">
+                            <input type="text" id="cardNumber" name="cardNumber" value="${metodo_pago}">
                             <img src="https://www.costco.com/wcsstore/CostcoGLOBALSAS/images/payment-visa.png" alt="Visa" height="20">
                             <img src="https://www.costco.com/wcsstore/CostcoGLOBALSAS/images/payment-mc.png" alt="MasterCard" height="20">
                         </div>
                         
-                        <label for="expirationDate">Caducidad Codigo</label>
+                        <label for="expirationDate">Expiration Date</label>
                         <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY">
                         
-                        <label for="cardholderName">Titular</label>
+                        <label for="cardholderName">Cardholder Name</label>
                         <input type="text" id="cardholderName" name="cardholderName">
                         
-                        <button type="submit">Añdir Tarjeta</button>
+                        <button type="submit">Add Card</button>
                     </form>
                     <div class="auto-renew">
                         <a href="#">Set up Membership Auto Renew</a>
@@ -186,6 +195,11 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+      function clearCookies(){
+          document.cookie = 'usuario=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      }
+  </script>
     <jsp:include page="../footer.jsp"/>
 </body>
 

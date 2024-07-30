@@ -1,3 +1,5 @@
+<%@ page import="org.json.JSONArray" %>
+<%@ page import="org.json.JSONObject" %>
 <%@page pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
@@ -8,10 +10,11 @@
     <title>Lists</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    
-    <link href="styles/costco-icons.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="styles/default.css" rel="stylesheet">
+
+    <link href="../styles/costco-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="../styles/default.css" rel="stylesheet">
     <style>
         #main-content {
             font-family: Arial, sans-serif;
@@ -208,55 +211,92 @@
 </head>
 
 <body class="default-theme">
-    <jsp:include page="../header.jsp"/>
+<jsp:include page="../header.jsp"/>
 
 
-  <div class="container-xxl my-3">
+<div class="container-xxl my-3">
     <!-- URL -->
     <ul id="url" class="d-flex text-gray fs-7">
         <li><a class="url-link" href="/">Inicio</a></li>
-        <li><a class="url-link" href="/micuenta">Cuenta</a></li>
-      <li>Listas</li>
+        <li><a class="url-link" href="micuenta.jsp">Cuenta</a></li>
+        <li>Listas</li>
     </ul>
     <div id="main-content" class="container-fluid m-0 p-0">
         <div class="row m-0 p-0">
             <nav class="col-md-3 col-lg-2 d-md-block sidebar">
                 <h2>Bienvenido!</h2>
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i> Ordenes & Pedidos </a></li>
-                    <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i> Detalles de Cuenta</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i> Direcciones</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pay_methods"><i class="fas fa-credit-card"></i> Formas de Pago</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/costco_pay"><i class="fas fa-wallet"></i> Costco Pay</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/list"><i class="fas fa-list"></i> Lista</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/preference"><i class="fas fa-cog"></i> Preferencias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account
+                        Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/ordenes"><i class="fas fa-box"></i> Orders
+                        & Purchases</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i>
+                        Detalles de Cuenta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i>
+                        Direcciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pay_methods"><i class="fas fa-credit-card"></i>
+                        Formas de Pago</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../costco_pay.jsp"><i class="fas fa-wallet"></i>
+                        Costco
+                        Pay</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/list"><i class="fas fa-list"></i> Lista</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../preference.jsp"><i class="fas fa-cog"></i>
+                        Preferencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/" onClick="clearCookies()"><i
+                            class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    </li>
                 </ul>
             </nav>
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
                 <div class="container">
                     <h1>Lists</h1>
+                    <%
+                        JSONArray lista = (JSONArray) request.getAttribute("lista");
+
+                        for (Object e : lista) {
+                            JSONObject elemento = (JSONObject) e;
+//                                    System.out.println(orden.get("numero_orden"));
+                    %>
+
+
+                    <div class="row box">
+                        <div class="col-3">
+                            <img src="img/productos/<%=elemento.get("imgpath1")%>" class="card-img-top"
+                                 alt="<%=elemento.get("producto_nombre")%>">
+                        </div>
+                        <div class="col">
+                            <span>
+                                <%=elemento.get("codigo_producto")%>
+                            </span>
+                            <span>
+                                <%=elemento.get("producto_nombre")%>
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <%}%>
                     <div class="box" onclick="openModal()">
                         <span>+</span>
-                        <p>Crear Lista </p>
+                        <p>Create New List</p>
                     </div>
                 </div>
 
                 <div id="myModal" class="modal">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h2>Crear </h2>
+                            <h2>Create List</h2>
                             <span class="close" onclick="closeModal()">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <label for="listName">Nombre de Lista</label>
+                            <label for="listName">List Name</label>
                             <input type="text" id="listName" name="listName">
                         </div>
                         <div class="modal-footer">
                             <button class="cancel-button" onclick="closeModal()">Cancel</button>
-                            <button class="create-button">Crear</button>
+                            <button class="create-button">Create List</button>
                         </div>
                     </div>
                 </div>
@@ -264,33 +304,37 @@
         </div>
     </div>
 
-  </div>
+</div>
 
- 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function enableEdit(id) {
-            var input = document.getElementById(id);
-            input.removeAttribute('readonly');
-            input.focus();
-        }
 
-        function openModal() {
-            document.getElementById('myModal').style.display = 'block';
-        }
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function clearCookies() {
+        document.cookie = 'usuario=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
 
-        function closeModal() {
-            document.getElementById('myModal').style.display = 'none';
-        }
+    function enableEdit(id) {
+        var input = document.getElementById(id);
+        input.removeAttribute('readonly');
+        input.focus();
+    }
 
-        window.onclick = function(event) {
-            var modal = document.getElementById('myModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
+    function openModal() {
+        document.getElementById('myModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+
+    window.onclick = function (event) {
+        var modal = document.getElementById('myModal');
+        if (event.target == modal) {
+            modal.style.display = 'none';
         }
-    </script>
-    <jsp:include page="../footer.jsp"/>
+    }
+</script>
+<jsp:include page="../footer.jsp"/>
 </body>
 
 </html>
