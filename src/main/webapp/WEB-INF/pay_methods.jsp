@@ -144,7 +144,7 @@
                 <h2>Bienvenido!</h2>
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i> Orders & Purchases</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i> Ordenes & Pedidos</a></li>
                     <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i> Detalles de Cuenta</a></li>
                     <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i> Direcciones</a></li>
                     <li class="nav-item"><a class="nav-link active" href="/pay_methods"><i class="fas fa-credit-card"></i> Formas de Pago</a></li>
@@ -160,22 +160,22 @@
 
                 <div class="form-container">
                     <h2>Payment Methods</h2>
-                    <p>Only one online payment method may be stored at a time. Any changes to the payment method will replace the default payment method for all future orders, refills and family accounts linked.</p>
+                    <p>Solo se puede almacenar un método de pago en línea a la vez. Cualquier cambio en el método de pago reemplazará el método de pago predeterminado</p>
                     <form>
-                        <label for="cardNumber">Card Number</label>
+                        <label for="cardNumber">Tarjeta Número</label>
                         <div class="card-logos">
                             <input type="text" id="cardNumber" name="cardNumber">
                             <img src="https://www.costco.com/wcsstore/CostcoGLOBALSAS/images/payment-visa.png" alt="Visa" height="20">
                             <img src="https://www.costco.com/wcsstore/CostcoGLOBALSAS/images/payment-mc.png" alt="MasterCard" height="20">
                         </div>
                         
-                        <label for="expirationDate">Expiration Date</label>
+                        <label for="expirationDate">Caducidad Codigo</label>
                         <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY">
                         
-                        <label for="cardholderName">Cardholder Name</label>
+                        <label for="cardholderName">Titular</label>
                         <input type="text" id="cardholderName" name="cardholderName">
                         
-                        <button type="submit">Add Card</button>
+                        <button type="submit">Añdir Tarjeta</button>
                     </form>
                     <div class="auto-renew">
                         <a href="#">Set up Membership Auto Renew</a>
