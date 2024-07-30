@@ -14,6 +14,15 @@
           <img width="200" src="img/logo3.png">
         </div>
       </nav>
+
+      <div class="toast-container position-absolute start-50">
+        <div id="error-toast" class="toast" role="alert">
+          <div class="d-flex justify-content-between toast-body">
+            <strong id="toast-text" class="text-danger"></strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+          </div>
+        </div>
+      </div>
     
     <div id="main-container">
         <h1>Iniciar Sesión</h1>
@@ -42,6 +51,8 @@
             <a href="registrar.jsp">Crear Cuenta</a>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="scripts/sign.js"></script>
 </body>
 </html>

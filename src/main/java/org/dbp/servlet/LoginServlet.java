@@ -47,8 +47,7 @@ public class LoginServlet extends HttpServlet {
         //  2. retorna login.jsp de nuevo con parametro get error????
         if (usuario == null || !Objects.equals(usuario.getPassword(), request.getParameter("password"))) {
 //            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-            log("Usuario invalido");
-            response.sendRedirect("/login");
+            response.sendRedirect("/login?error=Usuario invalido");
             return;
         }
 

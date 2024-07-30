@@ -10,3 +10,15 @@ function togglePassword(inputId) {
         eyeIcon.src = "https://cdn-icons-png.flaticon.com/512/6684/6684701.png"; 
     }
 }
+
+function error(msg) {
+    document.getElementById("toast-text").textContent = msg;
+    const toast = bootstrap.Toast.getOrCreateInstance(document.getElementById("error-toast"));
+    toast.show();
+}
+
+const params = new URLSearchParams(window.location.search);
+console.log("AA");
+if(params.has("error")) {
+    error(params.get("error"));
+}
