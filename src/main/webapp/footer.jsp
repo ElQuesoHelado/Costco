@@ -39,9 +39,9 @@
       </div>
       <div class="col-3">
         Membresías<br>
-        <a class="footer-link" href="#">Iniciar Sesión</a><br>
-        <a class="footer-link" href="#">Hazte Socio</a><br>
-        <a class="footer-link" href="#">Beneficios para Socios</a><br>
+        <a class="footer-link" href="/micuenta">Iniciar Sesión</a><br>
+        <a class="footer-link" href="/micuenta">Hazte Socio</a><br>
+        <a class="footer-link" href="/micuenta">Beneficios para Socios</a><br>
       </div>
       <div class="col-3">
         Servicios Adicionales<br>
