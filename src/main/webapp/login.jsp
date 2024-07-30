@@ -28,7 +28,7 @@
                 <span class="toggle-password" onclick="togglePassword('password')"></span>
             </div>
             <div class="form-group">
-                <a href="forgot_password.html" class="forgot-link">¿Olvidaste tu Contraseña?</a>
+                <a href="forgot_password.jsp" class="forgot-link">¿Olvidaste tu Contraseña?</a>
             </div>
             <div class="form-group">
                 <input class="form-check-input" type="checkbox" id="keep-signed-in">
