@@ -17,24 +17,26 @@
     
     <div id="main-container">
         <h1>Iniciar Sesión</h1>
-        <div class="form-group">
-            <label for="email">Dirección de Correo Electrónico</label>
-            <input type="email" id="email" required>
-        </div>
-        <div class="form-group password-group">
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" required>
-            <span class="toggle-password" onclick="togglePassword('password')"></span>
-        </div>
-        <div class="form-group">
-            <a href="forgot_password.html" class="forgot-link">¿Olvidaste tu Contraseña?</a>
-        </div>
-        <div class="form-group">
-            <input class="form-check-input" type="checkbox" id="keep-signed-in">
-            <label class="form-label" for="keep-signed-in">Mantenerme Conectado</label>
-            <p class="info-text">Marca esta casilla solo cuando estés en un dispositivo privado.</p>
-        </div>
-        <button type="submit">Iniciar Sesión</button>
+        <form method="post" action="/login">
+            <div class="form-group">
+                <label for="email">Dirección de Correo Electrónico</label>
+                <input type="email" id="email" name="username" required>
+            </div>
+            <div class="form-group password-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+                <span class="toggle-password" onclick="togglePassword('password')"></span>
+            </div>
+            <div class="form-group">
+                <a href="forgot_password.html" class="forgot-link">¿Olvidaste tu Contraseña?</a>
+            </div>
+            <div class="form-group">
+                <input class="form-check-input" type="checkbox" id="keep-signed-in">
+                <label class="form-label" for="keep-signed-in">Mantenerme Conectado</label>
+                <p class="info-text">Marca esta casilla solo cuando estés en un dispositivo privado.</p>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
         <div class="new-account">
             <span>¿Nuevo en Costco?</span>
             <a href="registrar.jsp">Crear Cuenta</a>

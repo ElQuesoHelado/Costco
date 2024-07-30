@@ -17,28 +17,30 @@
 
     <div id="main-container">
         <h1>Crear Cuenta</h1>
-        <div class="form-group">
-            <label for="new-email">Dirección de Correo Electrónico</label>
-            <input type="email" id="new-email" required>
-        </div>
-        <div class="form-group password-group">
-            <label class="form-label" for="new-password">Contraseña</label>
-            <input class="form-control" type="password" id="new-password" required>
-            <span class="toggle-password" onclick="togglePassword('new-password')">
-                <img src="https://w7.pngwing.com/pngs/221/536/png-transparent-eye-password-see-view-minimalisticons-icon-thumbnail.png" alt="Mostrar Contraseña" id="eye-icon-new-password">
-            </span>
-        </div>
-        <div class="form-group password-group">
-            <label class="form-label" for="confirm-password">Confirmar Contraseña</label>
-            <input class="form-control" type="password" id="confirm-password" required>
-            <span class="toggle-password" onclick="togglePassword('confirm-password')">
-                <img src="https://w7.pngwing.com/pngs/221/536/png-transparent-eye-password-see-view-minimalisticons-icon-thumbnail.png" alt="Mostrar Contraseña" id="eye-icon-confirm-password">
-            </span>
-        </div>
-        <div class="terms">
-            Al crear una cuenta, aceptas los <a href="#">términos y condiciones de uso</a> de Costco.com.
-        </div>
-        <button type="submit">Crear Cuenta</button>
+        <form method="post" action="/registrar">
+            <div class="form-group">
+                <label for="new-email">Dirección de Correo Electrónico</label>
+                <input type="email" id="new-email" required>
+            </div>
+            <div class="form-group password-group">
+                <label class="form-label" for="new-password">Contraseña</label>
+                <input class="form-control" type="password" id="new-password" required>
+                <span class="toggle-password" onclick="togglePassword('new-password')">
+                    <img src="https://w7.pngwing.com/pngs/221/536/png-transparent-eye-password-see-view-minimalisticons-icon-thumbnail.png" alt="Mostrar Contraseña" id="eye-icon-new-password">
+                </span>
+            </div>
+            <div class="form-group password-group">
+                <label class="form-label" for="confirm-password">Confirmar Contraseña</label>
+                <input class="form-control" type="password" id="confirm-password" required>
+                <span class="toggle-password" onclick="togglePassword('confirm-password')">
+                    <img src="https://w7.pngwing.com/pngs/221/536/png-transparent-eye-password-see-view-minimalisticons-icon-thumbnail.png" alt="Mostrar Contraseña" id="eye-icon-confirm-password">
+                </span>
+            </div>
+            <div class="terms">
+                Al crear una cuenta, aceptas los <a href="#">términos y condiciones de uso</a> de Costco.com.
+            </div>
+            <button type="submit">Crear Cuenta</button>
+        </form>
         <div class="existing-account">
             <span>¿Ya tienes una cuenta?</span>
             <a href="login.jsp">Iniciar Sesión</a>

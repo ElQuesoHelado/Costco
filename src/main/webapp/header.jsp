@@ -1,4 +1,4 @@
-<%@page pageEncoding="UTF-8" import="org.json.JSONArray,org.json.JSONObject,org.dbp.repository.CategoriasRepository" %>
+<%@page pageEncoding="UTF-8" import="org.json.JSONArray,org.json.JSONObject,org.dbp.repository.CategoriasRepository,org.dbp.security.Security"%>
 <%
     if (session.getAttribute("categorias") == null)
         session
@@ -25,7 +25,15 @@
                 <td valign="bottom">
                     <a class="d-flex flex-column align-items-center">
                         <img src="img/login.svg" width="28">
-                        <a href="/login" style="font-size: small;">Iniciar sesión</a>
+                        <%
+                            Cookie usuario = Security.getCookieUsuario(request);
+                            if(usuario != null && !usuario.getValue().isEmpty()) {%>
+                            <a href="/micuenta.jsp" style="font-size: small;">
+                                Mi Cuenta
+                            </a>    
+                            <% } else {%>
+                            <a href="/login.jsp" style="font-size: small;">Iniciar Sesión</a>    
+                            <%}%>
                     </a>
                 </td>
                 <td valign="bottom">

@@ -12,11 +12,13 @@ import static org.dbp.security.Security.removeCookieUsuario;
 import java.io.IOException;
 
 
-@WebServlet("")
-public class HomeServlet extends HttpServlet {
+@WebServlet("/logout")
+public class LogoutServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
-        request.getRequestDispatcher("/index.jsp").forward(request,response);
+        removeCookieUsuario(request, response);
+        
+        response.sendRedirect("/");
     }
 }
