@@ -34,6 +34,6 @@ public class PayMethodsServlet extends HttpServlet {
 //        log(usuario.getPassword());
 
         request.setAttribute("metodo_pago", usuario.getMetodo_pago());
-        request.getRequestDispatcher("WEB-INF/pay_methods.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/pay_methods.jsp").forward(request, response);
     }
 }

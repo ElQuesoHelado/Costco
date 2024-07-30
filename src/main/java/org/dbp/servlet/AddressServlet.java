@@ -37,6 +37,6 @@ public class AddressServlet extends HttpServlet {
 //        log(usuario.getPassword());
 
         request.setAttribute("direcciones", direcciones);
-        request.getRequestDispatcher("WEB-INF/address.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/address.jsp").forward(request, response);
     }
 }

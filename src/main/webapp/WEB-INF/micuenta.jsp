@@ -12,7 +12,7 @@
     <link href="styles/account.css" rel="stylesheet">
 </head>
 <body class="default-theme">
-    <jsp:include page="header.jsp"/>
+    <jsp:include page="../header.jsp"/>
   
     <div class="container-xxl my-3">
         <!-- URL -->
@@ -39,7 +39,7 @@
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3">
                                                         <div>
-                                                                <a class="css-1ascxaa" href="WEB-INF/ordens.jsp ">
+                                                                <a class="css-1ascxaa" href="/ordenes">
                                                                     <div class="css-togawm">
                                                                         <h2 class="css-1s1bbef">Pedidos & Compras</h2>
                                                                         <div class="img_content">
@@ -59,7 +59,7 @@
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3">
                                                         <div>
-                                                            <a class="css-1ascxaa" href="WEB-INF/detalles_cuenta.jsp ">
+                                                            <a class="css-1ascxaa" href="/detalles_cuenta ">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Detalles de Cuenta</h2>
                                                                     <div class="img_content">
@@ -83,7 +83,7 @@
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3">
                                                         <div>
-                                                            <a class="css-1ascxaa" href="WEB-INF/adress.jsp">
+                                                            <a class="css-1ascxaa" href="/address">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Direcciones</h2>
                                                                     <div class="img_content">
@@ -104,7 +104,7 @@
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3" >
                                                         <div>
-                                                            <a class="css-1ascxaa" href="WEB-INF/pay_methods.jsp">
+                                                            <a class="css-1ascxaa" href="/pay_methods">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Formas de Pago</h2>
                                                                     <div class="img_content">
@@ -125,7 +125,7 @@
                                                 <div class="row">
                                                     <div class="col-md-3 col-lg-3">
                                                         <div>
-                                                            <a class="css-1ascxaa" href="WEB-INF/costco_pay.jsp">
+                                                            <a class="css-1ascxaa" href="/costco_pay">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Costco Pay</h2>
                                                                     <div class="img_content">
@@ -146,7 +146,7 @@
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3">
                                                         <div>
-                                                            <a class="css-1ascxaa" href="WEB-INF/WEB-INF/list.jsp">
+                                                            <a class="css-1ascxaa" href="/list">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Listas</h2>
                                                                     <div class="img_content">
@@ -167,7 +167,7 @@
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3">
                                                         <div>
-                                                            <a class="css-1ascxaa" href="WEB-INF/preference.jsp">
+                                                            <a class="css-1ascxaa" href="/preference">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Preferencias</h2>
                                                                     <div class="img_content">
@@ -220,6 +220,6 @@
         }
     </script>
 
-    <jsp:include page="footer.jsp"/>
+    <jsp:include page="../footer.jsp"/>
 </body>
 </html>

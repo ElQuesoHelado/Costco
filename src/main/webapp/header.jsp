@@ -28,7 +28,7 @@
                         <%
                             Cookie usuario = Security.getCookieUsuario(request);
                             if(usuario != null && !usuario.getValue().isEmpty()) {%>
-                            <a href="/micuenta.jsp" style="font-size: small;">
+                            <a href="/micuenta" style="font-size: small;">
                                 Mi Cuenta
                             </a>    
                             <% } else {%>
