@@ -34,6 +34,6 @@ public class DetallesCuentaServlet extends HttpServlet {
 //        log(usuario.getPassword());
 
         request.setAttribute("usuario", usuario);
-        request.getRequestDispatcher("WEB-INF/detalles_cuenta.jsp").forward(request, response);
+        request.getRequestDispatcher("detalles_cuenta.jsp").forward(request, response);
     }
 }

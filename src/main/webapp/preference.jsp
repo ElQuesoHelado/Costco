@@ -116,7 +116,7 @@
         <!-- URL -->
         <ul id="url" class="d-flex text-gray fs-7">
           <li><a class="url-link" href="/">Inicio</a></li>
-          <li><a class="url-link" href="WEB-INF/micuenta.jsp">Cuenta</a></li>
+          <li><a class="url-link" href="micuenta.jsp">Cuenta</a></li>
           <li>Preferencias</li>
         </ul>
         <div id="main-content" class="container-fluid m-0 p-0">

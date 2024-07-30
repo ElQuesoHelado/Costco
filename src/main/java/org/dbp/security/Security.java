@@ -23,7 +23,6 @@ public class Security {
         if(cookie != null) {
             cookie.setValue("");
             cookie.setMaxAge(0);
-            cookie.setPath(request.getContextPath());
             response.addCookie(cookie);
         }
     }

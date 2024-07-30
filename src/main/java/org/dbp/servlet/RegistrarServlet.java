@@ -31,4 +31,15 @@ public class RegistrarServlet extends HttpServlet {
         }
         request.getRequestDispatcher("/registrar.jsp").forward(request, response);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String username = req.getParameter("username");
+        usuariosRepository.registrarUsuario(username, req.getParameter("password"), null);
+        
+        Cookie loginCookie = new Cookie("usuario", username);
+        loginCookie.setMaxAge(60*5);
+        resp.addCookie(loginCookie);
+        resp.sendRedirect("/");
+    }
 }

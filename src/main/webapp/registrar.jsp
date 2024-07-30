@@ -20,7 +20,7 @@
         <form method="post" action="/registrar">
             <div class="form-group">
                 <label for="new-email">Dirección de Correo Electrónico</label>
-                <input type="email" id="new-email" required>
+                <input type="email" id="new-email" name="username" required>
             </div>
             <div class="form-group password-group">
                 <label class="form-label" for="new-password">Contraseña</label>
@@ -31,7 +31,7 @@
             </div>
             <div class="form-group password-group">
                 <label class="form-label" for="confirm-password">Confirmar Contraseña</label>
-                <input class="form-control" type="password" id="confirm-password" required>
+                <input class="form-control" type="password" id="confirm-password" name="password" required>
                 <span class="toggle-password" onclick="togglePassword('confirm-password')">
                     <img src="https://w7.pngwing.com/pngs/221/536/png-transparent-eye-password-see-view-minimalisticons-icon-thumbnail.png" alt="Mostrar Contraseña" id="eye-icon-confirm-password">
                 </span>

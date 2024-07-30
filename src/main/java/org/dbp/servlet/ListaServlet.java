@@ -38,6 +38,6 @@ public class ListaServlet extends HttpServlet {
 //        log(usuario.getPassword());
 
         request.setAttribute("lista", lista);
-        request.getRequestDispatcher("WEB-INF/list.jsp").forward(request, response);
+        request.getRequestDispatcher("list.jsp").forward(request, response);
     }
 }
