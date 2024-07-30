@@ -122,8 +122,7 @@
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account
                         Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/ordenes"><i class="fas fa-box"></i> Orders
-                        & Purchases</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/ordenes"><i class="fas fa-box"></i> Pedidos & Compras</a></li>
                     <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i>
                         Detalles de Cuenta</a></li>
                     <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i>
@@ -160,7 +159,7 @@
 
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="online" role="tabpanel" aria-labelledby="online-tab">
-                        <p>Your new orders will appear shortly after confirmation.</p>
+                        <p>Sus nuevos pedidos aparecerán poco después de la confirmación..</p>
                         <div class="row">
                             <%
                                 JSONArray ordenes = (JSONArray) request.getAttribute("ordenes");
@@ -215,24 +214,23 @@
                         <div class="dropdown d-flex justify-content-end mb-3">
                             <button class="btn btn-outline-secondary dropdown-toggle" type="button"
                                     id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                Showing: <span id="selected-period">Last 6 Months</span>
+                                Showing: <span id="selected-period">Ulitmo 6 Mesess </span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('Last 6 Months')">Last 6
-                                    Months</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('2024 January-June')">2024
+                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('Last 6 Months')">Ultimos 6 Meses</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('2024 Enero-Junio')">2024
                                     January-June</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('2023 July-December')">2023
+                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('2023 Julio-Diciembre')">2023
                                     July-December</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('2023 January-June')">2023
+                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('2023 Enero-Junio')">2023
                                     January-June</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('2022 July-December')">2022
+                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('2022 Julio-Diciembre')">2022
                                     July-December</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('2022 January-June')">2022
+                                <li><a class="dropdown-item" href="#" onclick="selectPeriod('2022 Enero-Junio')">2022
                                     January-June</a></li>
                             </ul>
                         </div>
-                        <p>No orders are available for the selected date range.</p>
+                        <p>No hay pedidos disponibles para el rango de fechas seleccionado.</p>
                     </div>
                     <div class="tab-pane fade" id="in-warehouse" role="tabpanel" aria-labelledby="in-warehouse-tab">
                         <!-- Content for In-Warehouse tab -->
