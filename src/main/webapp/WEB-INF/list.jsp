@@ -228,8 +228,7 @@
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account
                         Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/ordenes"><i class="fas fa-box"></i> Orders
-                        & Purchases</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/ordenes"><i class="fas fa-box"></i>Pedidos & Compras</a></li>
                     <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i>
                         Detalles de Cuenta</a></li>
                     <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i>
@@ -280,23 +279,23 @@
                     <%}%>
                     <div class="box" onclick="openModal()">
                         <span>+</span>
-                        <p>Create New List</p>
+                        <p>Crear Nueva Lista</p>
                     </div>
                 </div>
 
                 <div id="myModal" class="modal">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h2>Create List</h2>
+                            <h2>Crear Lista</h2>
                             <span class="close" onclick="closeModal()">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <label for="listName">List Name</label>
+                            <label for="listName">Nombre</label>
                             <input type="text" id="listName" name="listName">
                         </div>
                         <div class="modal-footer">
-                            <button class="cancel-button" onclick="closeModal()">Cancel</button>
-                            <button class="create-button">Create List</button>
+                            <button class="cancel-button" onclick="closeModal()">Cancelar</button>
+                            <button class="create-button">Crear Lista</button>
                         </div>
                     </div>
                 </div>

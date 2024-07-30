@@ -250,52 +250,51 @@
                     <div class="modal-content">
                         <span class="close" onclick="closeModal()">&times;</span>
                         <div class="form-container">
-                            <h2>Add New Address</h2>
+                            <h2>Añadir Dirección</h2>
                             <form>
-                                <label for="firstName">First Name</label>
+                                <label for="firstName">Nombres</label>
                                 <input type="text" id="firstName" name="firstName">
 
-                                <label for="lastName">Last Name</label>
+                                <label for="lastName">Apellidos</label>
                                 <input type="text" id="lastName" name="lastName">
 
-                                <label for="companyName">Company Name (optional)</label>
+                                <label for="companyName">Nombre de la Compañía (opcional)</label>
                                 <input type="text" id="companyName" name="companyName">
 
-                                <label for="streetAddress">Street Address</label>
+                                <label for="streetAddress">Dirección</label>
                                 <input type="text" id="streetAddress" name="streetAddress">
 
-                                <label for="apt">Apt., Suite, Unit, Etc. (optional)</label>
+                                <label for="apt">Departamento. Suite (optional)</label>
                                 <input type="text" id="apt" name="apt">
 
-                                <label for="zipCode">Zip Code</label>
+                                <label for="zipCode">Codigo Postal</label>
                                 <input type="text" id="zipCode" name="zipCode" pattern="\d*"
                                        title="Only numbers are allowed">
 
-                                <label for="city">City</label>
+                                <label for="city">Ciudad</label>
                                 <input type="text" id="city" name="city">
 
-                                <label for="state">State</label>
+                                <label for="state">Estado</label>
                                 <select id="state" name="state">
-                                    <option value="">Select</option>
+                                    <option value="">Seleccionar</option>
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
                                     <!-- Other states omitted for brevity -->
                                 </select>
 
-                                <label for="email">Email Address</label>
+                                <label for="email">Email</label>
                                 <input type="email" id="email" name="email" value="jorgerivas9725@gmail.com">
 
-                                <label for="phone">Phone</label>
+                                <label for="phone">Celular</label>
                                 <input type="text" id="phone" name="phone" pattern="\d*"
                                        title="Only numbers are allowed">
 
                                 <div>
-                                    <button type="button" class="cancel-button" onclick="cancel()">Cancel</button>
-                                    <button type="submit" class="save-button">Save Address</button>
+                                    <button type="button" class="cancel-button" onclick="cancel()">Cancelar</button>
+                                    <button type="submit" class="save-button">Guardar</button>
                                 </div>
                             </form>
-                            <p>Changes made here to your shipping or billing address will not update the address
-                                associated with your membership.</p>
+                            <p>Los cambios realizados aquí en su dirección de envío o facturación no actualizarán la dirección asociada a su afiliación.</p>
                         </div>
                     </div>
                 </div>
