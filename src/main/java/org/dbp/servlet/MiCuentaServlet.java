@@ -21,6 +21,7 @@ public class MiCuentaServlet extends HttpServlet {
 
         if (cookieUsuario == null) {
             response.sendRedirect("/login");
+            log("Sin cookie");
             return;
         }
 

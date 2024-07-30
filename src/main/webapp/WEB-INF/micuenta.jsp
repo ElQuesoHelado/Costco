@@ -187,7 +187,7 @@
                                             <div class="css-1wawha4 ">
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3">
-                                                        <div>
+                                                        <div onclick="clearCookies()">
                                                             <a class="css-1ascxaa" href="/logout">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Salir</h2>
@@ -214,6 +214,11 @@
                 </div>
             </div>
     </div>
+    <script>
+        function clearCookies(){
+            document.cookie = 'usuario=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+    </script>
 
     <jsp:include page="footer.jsp"/>
 </body>

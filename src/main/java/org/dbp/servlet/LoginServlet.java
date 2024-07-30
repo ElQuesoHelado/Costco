@@ -36,8 +36,8 @@ public class LoginServlet extends HttpServlet {
         Cookie cookieUsuario = getCookieUsuario(request);
 
         if (cookieUsuario != null) {
-            log("Ya esta logeado");
-            response.sendRedirect("/");
+//            log("Ya esta logeado");
+            response.sendRedirect("/micuenta");
             return;
         }
 

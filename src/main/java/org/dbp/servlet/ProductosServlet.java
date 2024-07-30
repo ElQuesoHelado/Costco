@@ -18,17 +18,12 @@ import java.util.ArrayList;
 public class ProductosServlet extends HttpServlet {
 
     ProductosRepository productosRepository = new ProductosRepository();
-//    CategoriasRepository categoriasRepository = new CategoriasRepository();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String categoria = request.getParameter("categoria");
         String subcategoria = request.getParameter("subcategoria");
         String subsubcategoria = request.getParameter("subsubcategoria");
-//        log(categoria);
-//        log(subcategoria);
-//        log(subsubcategoria);
-
 
         ArrayList<Producto> productos = productosRepository.get_productos(categoria, subcategoria, subsubcategoria);
         JSONArray resultado = new JSONArray();
