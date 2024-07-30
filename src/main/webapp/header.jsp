@@ -36,12 +36,6 @@
                             <%}%>
                     </a>
                 </td>
-                <td valign="bottom">
-                    <a class="d-flex flex-column align-items-center position-relative">
-                        <span class="ci ci-carrito position-absolute" style="top: -27px;"></span>
-                        <p style="font-size: small;">Carrito</p>
-                    </a>
-                </td>
             </tr>
             </tbody>
         </table>

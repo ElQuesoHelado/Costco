@@ -188,7 +188,7 @@
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3">
                                                         <div>
-                                                            <a class="css-1ascxaa" href="/">
+                                                            <a class="css-1ascxaa" href="/logout">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Salir</h2>
                                                                     <div class="img_content">
