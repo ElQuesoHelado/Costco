@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lists</title>
+    <title>Listas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
@@ -92,7 +92,7 @@
             display: inline-block;
         }
 
-        /* New styles for Lists section */
+        /* New styles for Listas section */
         #main-content .container {
             margin: 20px;
         }
@@ -228,7 +228,7 @@
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account
                         Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/ordenes"><i class="fas fa-box"></i>Pedidos & Compras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i>Pedidos & Compras</a></li>
                     <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i>
                         Detalles de Cuenta</a></li>
                     <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i>
@@ -238,8 +238,8 @@
                     <li class="nav-item"><a class="nav-link" href="../costco_pay.jsp"><i class="fas fa-wallet"></i>
                         Costco
                         Pay</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/list"><i class="fas fa-list"></i> Lista</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../preference.jsp"><i class="fas fa-cog"></i>
+                    <li class="nav-item"><a class="nav-link active" href="/list"><i class="fas fa-list"></i> Lista</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/preference"><i class="fas fa-cog"></i>
                         Preferencias</a></li>
                     <li class="nav-item"><a class="nav-link" href="/" onClick="clearCookies()"><i
                             class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
@@ -249,7 +249,7 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
                 <div class="container">
-                    <h1>Lists</h1>
+                    <h1>Listas</h1>
                     <%
                         JSONArray lista = (JSONArray) request.getAttribute("lista");
 

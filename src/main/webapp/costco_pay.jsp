@@ -99,7 +99,7 @@
 </head>
 
 <body class="default-theme">
-  <jsp:include page="../header.jsp"/>
+  <jsp:include page="header.jsp"/>
 
   <div class="container-xxl my-3">
     <!-- URL -->
@@ -143,7 +143,7 @@
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <jsp:include page="../footer.jsp"/>
+    <jsp:include page="footer.jsp"/>
 </body>
 
 </html>

@@ -167,7 +167,7 @@
                                                 <div class=" row">
                                                     <div class="col-md-3 col-lg-3">
                                                         <div>
-                                                            <a class="css-1ascxaa" href="/preference.jsp">
+                                                            <a class="css-1ascxaa" href="/preference">
                                                                 <div class="css-togawm">
                                                                     <h2 class="css-1s1bbef">Preferencias</h2>
                                                                     <div class="img_content">

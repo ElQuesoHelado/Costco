@@ -133,7 +133,7 @@
                         Costco
                         Pay</a></li>
                     <li class="nav-item"><a class="nav-link" href="/list"><i class="fas fa-list"></i> Lista</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../preference.jsp"><i class="fas fa-cog"></i>
+                    <li class="nav-item"><a class="nav-link" href="/preference"><i class="fas fa-cog"></i>
                         Preferencias</a></li>
                     <li class="nav-item"><a class="nav-link" href="/" onClick="clearCookies()"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                     </li>
