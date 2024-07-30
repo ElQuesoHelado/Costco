@@ -117,14 +117,14 @@
                 <nav class="col-md-3 col-lg-2 d-md-block sidebar">
                     <h2>Bienvenido!</h2>
                     <ul class="nav flex-column">
-                        <li class="nav-item"><a class="nav-link" href="micuenta.jsp"><i class="fas fa-home"></i> Account Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="ordens.jsp"><i class="fas fa-box"></i> Orders & Purchases</a></li>
-                        <li class="nav-item"><a class="nav-link" href="detalles_cuenta.jsp"><i class="fas fa-user"></i> Detalles de Cuenta</a></li>
-                        <li class="nav-item"><a class="nav-link" href="adress.jsp"><i class="fas fa-book"></i> Direcciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pay_methods.jsp"><i class="fas fa-credit-card"></i> Formas de Pago</a></li>
-                        <li class="nav-item"><a class="nav-link" href="costco_pay.jsp"><i class="fas fa-wallet"></i> Costco Pay</a></li>
-                        <li class="nav-item"><a class="nav-link" href="list.jsp"><i class="fas fa-list"></i> Lista</a></li>
-                        <li class="nav-item"><a class="nav-link" href="preference.jsp"><i class="fas fa-cog"></i> Preferencias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="WEB-INF/micuenta.jsp"><i class="fas fa-home"></i> Account Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="WEB-INF/ordens.jsp"><i class="fas fa-box"></i> Orders & Purchases</a></li>
+                        <li class="nav-item"><a class="nav-link" href="WEB-INF/detalles_cuenta.jsp"><i class="fas fa-user"></i> Detalles de Cuenta</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="WEB-INF/adress.jsp"><i class="fas fa-book"></i> Direcciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="WEB-INF/pay_methods.jsp"><i class="fas fa-credit-card"></i> Formas de Pago</a></li>
+                        <li class="nav-item"><a class="nav-link" href="WEB-INF/costco_pay.jsp"><i class="fas fa-wallet"></i> Costco Pay</a></li>
+                        <li class="nav-item"><a class="nav-link" href="WEB-INF/list.jsp"><i class="fas fa-list"></i> Lista</a></li>
+                        <li class="nav-item"><a class="nav-link" href="WEB-INF/preference.jsp"><i class="fas fa-cog"></i> Preferencias</a></li>
                         <li class="nav-item"><a class="nav-link" href="/"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
                     </ul>
                 </nav>

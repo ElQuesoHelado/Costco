@@ -39,6 +39,6 @@ public class OrdenesServlet extends HttpServlet {
 
         request.setAttribute("ordenes", ordenes);
 //        request.setAttribute("ejemplo", "aea");
-        request.getRequestDispatcher("ordenes.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/ordenes.jsp").forward(request, response);
     }
 }
