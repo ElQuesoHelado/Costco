@@ -114,7 +114,7 @@
                 <h2>Bienvenido!</h2>
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i> Orders & Purchases</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ordenes"><i class="fas fa-box"></i> Ordenes & Pedidos </a></li>
                     <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i> Detalles de Cuenta</a></li>
                     <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i> Direcciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pay_methods"><i class="fas fa-credit-card"></i> Formas de Pago</a></li>
@@ -128,10 +128,10 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
                 <div class="content-container">
                     <h1>Costco Pay</h1>
-                    <p><em>No new fobs available for pickup or registration.</em></p>
+                    <p><em>No hay llaveros nuevos disponibles para recoger o registrar.</em></p>
                     <ul>
-                        <li><a href="/costco_pay" target="_blank">What is Costco Pay?</a></li>
-                        <li><a href="/costco_pay" target="_blank">Where can I pick up and use the Costco Pay Fob?</a></li>
+                        <li><a href="/costco_pay" target="_blank">¿Qué es Costco Pay</a></li>
+                        <li><a href="/costco_pay" target="_blank">¿Dónde puedo recoger y utilizar el Costco Pay Fob?</a></li>
                         <li><a href="faqs.html">Costco Pay FAQs</a></li>
                     </ul>
                 </div>
