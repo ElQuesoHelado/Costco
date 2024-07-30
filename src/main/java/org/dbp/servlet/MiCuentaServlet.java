@@ -24,13 +24,9 @@ public class MiCuentaServlet extends HttpServlet {
             return;
         }
 
-        Usuario usuario = usuarioRepository.getUsuario(cookieUsuario.getValue());
+//        Usuario usuario = usuarioRepository.getUsuario(cookieUsuario.getValue());
 
-        log(Long.toString(usuario.getId()));
-        log(usuario.getEmail());
-        log(usuario.getPassword()); 
-
-        request.setAttribute("usuario", usuario);
-        request.getRequestDispatcher("/micuenta.jsp").forward(request, response);
+//        request.setAttribute("usuario", usuario);
+        request.getRequestDispatcher("WEB-INF/micuenta.jsp").forward(request, response);
     }
 }

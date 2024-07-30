@@ -11,26 +11,33 @@ import java.sql.*;
 public class ProductosRepository extends Repository {
 
     public ArrayList<Producto> get_productos(String categoria, String subcategoria, String subsubcategoria) {
+//        System.out.println(categoria + "|" + subcategoria + "|" + subsubcategoria);
+//        System.out.println(subcategoria.isEmpty());
+//        System.out.println(subsubcategoria);
+
         Connection conn;
         try {
             String sentencia = "SELECT * FROM producto WHERE categoria = ?";
-            if(subcategoria != null)
-              sentencia +=" AND subcategoria = ?";
+            if (subcategoria != null && !subcategoria.isEmpty()) {
+                sentencia += " AND subcategoria = ?";
+            }
 
-            if(subsubcategoria != null)
-              sentencia +=" AND subsubcategoria = ?";
+            if (subsubcategoria != null && !subsubcategoria.isEmpty()) {
+                sentencia += " AND subsubcategoria = ?";
+
+            }
 
             conn = DriverManager.getConnection(url, user, password);
-                    PreparedStatement st = conn.prepareStatement(sentencia);
+            PreparedStatement st = conn.prepareStatement(sentencia);
 
             st.setString(1, categoria);
-            if(subcategoria != null)
-              st.setString(2, subcategoria);
-            if(subsubcategoria != null)
-              st.setString(3, subsubcategoria);
+            if (subcategoria != null && !subcategoria.isEmpty())
+                st.setString(2, subcategoria);
+            if (subsubcategoria != null && !subsubcategoria.isEmpty())
+                st.setString(3, subsubcategoria);
 
 //            log(st);
-            ResultSet       rs = st.executeQuery();
+            ResultSet rs = st.executeQuery();
 
 
             ArrayList<Producto> resultado = new ArrayList<>();

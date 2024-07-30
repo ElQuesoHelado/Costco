@@ -116,7 +116,7 @@
         <!-- URL -->
         <ul id="url" class="d-flex text-gray fs-7">
           <li><a class="url-link" href="/">Inicio</a></li>
-          <li><a class="url-link" href="micuenta.jsp">Cuenta</a></li>
+          <li><a class="url-link" href="WEB-INF/micuenta.jsp">Cuenta</a></li>
           <li>Preferencias</li>
         </ul>
         <div id="main-content" class="container-fluid m-0 p-0">
@@ -124,15 +124,24 @@
                 <nav class="col-md-3 col-lg-2 d-md-block sidebar">
                     <h2>Bienvenido!</h2>
                     <ul class="nav flex-column">
-                        <li class="nav-item"><a class="nav-link" href="micuenta.jsp"><i class="fas fa-home"></i> Account Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ordens.jsp"><i class="fas fa-box"></i> Orders & Purchases</a></li>
-                        <li class="nav-item"><a class="nav-link" href="datelles_cuenta.jsp"><i class="fas fa-user"></i> Detalles de Cuenta</a></li>
-                        <li class="nav-item"><a class="nav-link" href="adress.jsp"><i class="fas fa-book"></i> Direcciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pay_methods.jsp"><i class="fas fa-credit-card"></i> Formas de Pago</a></li>
-                        <li class="nav-item"><a class="nav-link" href="costco_pay.jsp"><i class="fas fa-wallet"></i> Costco Pay</a></li>
-                        <li class="nav-item"><a class="nav-link" href="list.jsp"><i class="fas fa-list"></i> Lista</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="preference.jsp"><i class="fas fa-cog"></i> Preferencias</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/micuenta"><i class="fas fa-home"></i> Account
+                            Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/ordenes"><i class="fas fa-box"></i> Orders
+                            & Purchases</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/detalles_cuenta"><i class="fas fa-user"></i>
+                            Detalles de Cuenta</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/address"><i class="fas fa-book"></i>
+                            Direcciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pay_methods"><i class="fas fa-credit-card"></i>
+                            Formas de Pago</a></li>
+                        <li class="nav-item"><a class="nav-link" href="costco_pay.jsp"><i class="fas fa-wallet"></i>
+                            Costco
+                            Pay</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/list"><i class="fas fa-list"></i> Lista</a></li>
+                        <li class="nav-item"><a class="nav-link" href="preference.jsp"><i class="fas fa-cog"></i>
+                            Preferencias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/" onClick="clearCookies()"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                        </li>
                     </ul>
                 </nav>
     
@@ -161,6 +170,11 @@
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+      function clearCookies(){
+          document.cookie = 'usuario=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      }
+  </script>
   <jsp:include page="footer.jsp"/>
 </body>
 

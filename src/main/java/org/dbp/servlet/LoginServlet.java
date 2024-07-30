@@ -54,7 +54,7 @@ public class LoginServlet extends HttpServlet {
 
         log("Usuario encontrado: " + usuario.getId() + " " + usuario.getEmail());
         Cookie loginCookie = new Cookie("usuario", usuario.getEmail());
-        loginCookie.setMaxAge(60);
+        loginCookie.setMaxAge(60*5);
         response.addCookie(loginCookie);
 
         response.sendRedirect("/micuenta");
