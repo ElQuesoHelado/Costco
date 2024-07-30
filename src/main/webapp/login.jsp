@@ -1,43 +1,45 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles/sign.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        .login-container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            border: 1px solid #dee2e6;
-            border-radius: 0.5rem;
-            background-color: #ffffff;
-        }
-    </style>
 </head>
 <body>
-<div class="container">
-    <div class="login-container shadow-lg p-3 mb-5 bg-white rounded">
-        <h2 class="text-center mb-4">Iniciar Sesión</h2>
-        <form action="${pageContext.request.contextPath}/login" method="post">
-            <div class="mb-3">
-                <label for="username" class="form-label">Usuario</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Ingrese su usuario" required>
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese su contraseña" required>
-            </div>
-            <div class="d-grid">
-                <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
-            </div>
-        </form>
+    <nav class="navbar navbar-expand-xxl" style="background-color: #eee;">
+        <div class="container-fluid justify-content-center py-1">
+          <img width="200" src="img/logo3.png">
+        </div>
+      </nav>
+    
+    <div id="main-container">
+        <h1>Iniciar Sesión</h1>
+        <div class="form-group">
+            <label for="email">Dirección de Correo Electrónico</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group password-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" required>
+            <span class="toggle-password" onclick="togglePassword('password')"></span>
+        </div>
+        <div class="form-group">
+            <a href="forgot_password.html" class="forgot-link">¿Olvidaste tu Contraseña?</a>
+        </div>
+        <div class="form-group">
+            <input class="form-check-input" type="checkbox" id="keep-signed-in">
+            <label class="form-label" for="keep-signed-in">Mantenerme Conectado</label>
+            <p class="info-text">Marca esta casilla solo cuando estés en un dispositivo privado.</p>
+        </div>
+        <button type="submit">Iniciar Sesión</button>
+        <div class="new-account">
+            <span>¿Nuevo en Costco?</span>
+            <a href="registrar.jsp">Crear Cuenta</a>
+        </div>
     </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/sign.js"></script>
 </body>
 </html>
